@@ -1,3 +1,5 @@
+import { stairsInYears } from "../src/suzuki"
+
 describe("solution", function () {
 
     it("Basic Tests", function () {
@@ -60,7 +62,9 @@ describe("solution", function () {
 
         var stairs = [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
 
-        expect((stairsIn20(stairs)).toStrictEqual(54636040))
+        expect(stairsInYears(stairs, 20)).toBe(54636040);
+        expect(stairsInYears(stairs, -1)).toBe(0);
+        expect(stairsInYears(stairs, 5.5)).toBe(15024911);
 
     });
 
